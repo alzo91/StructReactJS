@@ -2,8 +2,7 @@ import React from 'react';
 
 import IconButton from '@material-ui/core/IconButton';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Menu from '@material-ui/icons/Menu';
-import Grade from '@material-ui/icons/GradeRounded';
+
 import Work from '@material-ui/icons/WorkRounded';
 
 import { bindActionCreators } from 'redux';
