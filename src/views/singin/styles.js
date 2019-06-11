@@ -38,21 +38,20 @@ export const DivRow = styled.div`
 `;
 
 export const Button = styled(Link)`
-  background-color: #e5fcc2; /*#fff07a; /*#fffcbf;*/
-  color: #3a276a;
-  font-style: bold;
+  background-color: #0d132a; /*#f4fa9c; /* #fffcbf; */
+  color: #fff;
   width: 350px;
-  height: 24px;
+  padding: 16px;
   max-width: 350px;
   margin-top: 5px;
   margin-left: 5px;
-  border-radius: 5px;
   text-align: center;
-  border: 0.5px;
+  border-radius: 5px;
+  border: 3px;
   border-style: solid;
   border-color: #fff;
   &:hover {
-    background: #fcf9ec; /* #f4fa9c; /* #fce8aa; /* #faee1c;*/
-    color: #08085e;
+    background: #300532; /*#fffcbf; /* #fce8aa; /* #faee1c;*/
+    color: #fff; /*#08085e; */
   }
 `;

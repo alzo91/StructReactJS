@@ -3,7 +3,7 @@ import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import Work from '@material-ui/icons/WorkRounded';
+import ExitToApp from '@material-ui/icons/ExitToAppRounded';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -40,7 +40,7 @@ const Header = ({ title, doOpenMenu }) => (
           doOpenMenu({ open: true });
         }}
       >
-        <Work />
+        <ExitToApp />
       </IconButton>
     </div>
   </Container>

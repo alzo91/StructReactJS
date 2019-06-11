@@ -20,38 +20,64 @@ import { Link as RouterLink } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import { makeStyles } from '@material-ui/core/styles';
 import * as fnMenu from '../../store/actions/fnMenu';
 
-const MenuDrawer = ({ open, menus, doOpenMenu }) => (
-  <Drawer variant="persistent" anchor="left" open={open}>
-    <div>
-      <IconButton
-        onClick={() => {
-          doOpenMenu({ open: false });
-        }}
-      >
-        <ChevronLeftIcon />
-      </IconButton>
-    </div>
-    <Divider />
+const useStyles = makeStyles(theme => ({
+  drawerPaper: {
+    height: '100%',
+    background: '#0d132a' /* '#2a6f7f', */,
+    color: '#fff',
+  },
+}));
 
-    <List>
-      {menus.map((item, index) => (
-        <ListItem key={index}>
-          <ListItemIcon>
-            {item.icon === 'Home' && <Home />}
-            {item.icon === 'Place' && <Place />}
-            {item.icon === 'Settings' && <Settings />}
-            {item.icon === 'ViewList' && <ViewList />}
-          </ListItemIcon>
-          <Link component={RouterLink} to={item.url}>
-            {item.descr}
-          </Link>
-        </ListItem>
-      ))}
-    </List>
-  </Drawer>
-);
+// background: #2a6f7f;
+// color: #ffffff;
+
+function MenuDrawer({ open, menus, doOpenMenu }) {
+  const classes = useStyles();
+
+  return (
+    <Drawer
+      classes={{
+        paper: classes.drawerPaper,
+      }}
+      color="inherit"
+      variant="persistent"
+      anchor="left"
+      style={{ background: '#2a6f7f' }}
+      open={open}
+    >
+      <div>
+        <IconButton
+          color="inherit"
+          onClick={() => {
+            doOpenMenu({ open: false });
+          }}
+        >
+          <ChevronLeftIcon />
+        </IconButton>
+      </div>
+      <Divider style={{ background: '#fff' }} />
+
+      <List>
+        {menus.map((item, index) => (
+          <ListItem color="inherit" key={index}>
+            <ListItemIcon>
+              {item.icon === 'Home' && <Home style={{ color: '#fff' }} />}
+              {item.icon === 'Place' && <Place style={{ color: '#fff' }} />}
+              {item.icon === 'Settings' && <Settings style={{ color: '#fff' }} />}
+              {item.icon === 'ViewList' && <ViewList style={{ color: '#fff' }} />}
+            </ListItemIcon>
+            <Link color="inherit" component={RouterLink} to={item.url}>
+              {item.descr}
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
+  );
+}
 const mapStateToProps = state => ({ open: state.menu.open, menus: state.menu.menus });
 
 const mapDispatchToProps = dispatch => bindActionCreators(fnMenu, dispatch);

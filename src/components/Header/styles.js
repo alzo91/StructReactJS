@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: #2a6f7f;
+  background: #0d132a; /* #2a6f7f; */
   color: #ffffff;
 `;
 
