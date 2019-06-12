@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as fnMenu from '../../store/actions/fnMenu';
-// import { Container } from './styles';
+
 import Header from '../../components/Header';
 
 class Location extends Component {
