@@ -26,7 +26,7 @@ import * as fnMenu from '../../store/actions/fnMenu';
 const useStyles = makeStyles(theme => ({
   drawerPaper: {
     height: '100%',
-    background: '#0d132a' /* '#2a6f7f', */,
+    background: '#111f4d' /* '#2a6f7f', */,
     color: '#fff',
   },
 }));

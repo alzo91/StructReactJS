@@ -57,7 +57,7 @@ export const Button = styled(Link)`
 `;
 
 export const Error = styled.div`
-  background-color: #900c27; /* #d3560e; /*#ff5656; /* #ef5959;*/
+  background-color: #ff5656; /* #d3560e; /*#ff5656; /* #ef5959;*/
   width: 350px;
   max-width: 350px;
   text-align: center;
@@ -67,7 +67,7 @@ export const Error = styled.div`
   border-style: solid;
   border-color: #fff;
   &:hover {
-    background-color: #ff5656; /*#ff5656; /* #ef5959;*/
+    background-color: #900c27; /*#ff5656; /*#ff5656; /* #ef5959;*/
   }
   p {
     color: #fff;

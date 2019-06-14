@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body{
-    background: #f5f5f5; /*#ebebe3; /* #86d8dc; /*#c8f0f0; /* #333A56;/* #70a3c4; */
+    background: #f2f4f7; /* #f5f5f5; /*#ebebe3; /* #86d8dc; /*#c8f0f0; /* #333A56;/* #70a3c4; */
     text-rendering: optimizeLegibility !important;
     font-family: sans-serif;
   }
