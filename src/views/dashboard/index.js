@@ -4,6 +4,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+
 import { ToastContainer, toast, cssTransition } from 'react-toastify';
 import Header from '../../components/Header';
 
@@ -24,19 +27,38 @@ const Dashboard = ({ doOpenMenu }) => (
   <div>
     <Header title="Dashboard" />
     <ToastContainer />
-    <Button
-      color="primary"
-      onClick={() => {
-        toast('Uhuuuuu', {
-          position: 'top-center',
-          type: 'info',
-          transition: Zoom,
-          draggable: true,
-        });
-      }}
-    >
-      Gerar ToastNotification
-    </Button>
+    <Container maxWidth="sm" style={{ background: '#fff', height: '100%', marginTop: '20px' }}>
+      <Grid container spacing={3}>
+        <Grid item xs={3} sm={2}>
+          <Button color="primary" style={{ background: '#0d132a', color: '#fff' }} maxWidth="md">
+            Button Test
+          </Button>
+        </Grid>
+        <Grid item xs={3} sm={2}>
+          <Button color="primary" style={{ background: '#0d132a', color: '#fff' }} maxWidth="md">
+            Button Atuh
+          </Button>
+        </Grid>
+        <Grid item xs={3} sm={2}>
+          <Button color="primary" style={{ background: '#0d132a', color: '#fff' }} maxWidth="md">
+            Button Clear
+          </Button>
+        </Grid>
+      </Grid>
+      <Button
+        color="primary"
+        onClick={() => {
+          toast('Uhuuuuu', {
+            position: 'top-center',
+            type: 'info',
+            transition: Zoom,
+            draggable: true,
+          });
+        }}
+      >
+        Gerar ToastNotification
+      </Button>
+    </Container>
   </div>
 );
 
